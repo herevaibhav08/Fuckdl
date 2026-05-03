@@ -12,6 +12,29 @@ LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 LOG_STYLE = "{"
 LOG_FORMATTER = logging.Formatter(LOG_FORMAT, LOG_DATE_FORMAT, LOG_STYLE)
 
+# Red & Gold UI theme shared with the CLI entry point.
+RED_GOLD_LEVEL_STYLES = {
+    "spam":     {"color": "yellow", "faint": True},
+    "debug":    {"color": "yellow", "faint": True},
+    "verbose":  {"color": "yellow"},
+    "info":     {"color": "yellow", "bold": True},
+    "notice":   {"color": "yellow", "bold": True, "background": "red"},
+    "warning":  {"color": "red", "bold": True},
+    "success":  {"color": "yellow", "bold": True},
+    "error":    {"color": "red", "bold": True},
+    "critical": {"color": "white", "bold": True, "background": "red"},
+}
+
+RED_GOLD_FIELD_STYLES = {
+    "asctime":     {"color": "yellow"},
+    "hostname":    {"color": "red"},
+    "levelname":   {"color": "yellow", "bold": True},
+    "name":        {"color": "red", "bold": True},
+    "programname": {"color": "yellow"},
+    "username":    {"color": "yellow"},
+    "message":     {"color": "white"},
+}
+
 
 class Logger(logging.Logger):
     def __init__(self, name: str = "root", level: int = logging.NOTSET, color: bool = True):
@@ -49,10 +72,25 @@ class Logger(logging.Logger):
         self.add_stream_handler(fp)
 
     def install_color(self) -> None:
-        """Use coloredlogs to set up colors on the log output."""
+        """Use coloredlogs to set up colors on the log output (red & gold theme)."""
         if self.level == logging.DEBUG:
-            coloredlogs.install(level=self.level, fmt=LOG_FORMAT, datefmt=LOG_DATE_FORMAT, style=LOG_STYLE)
-        coloredlogs.install(level=self.level, logger=self, fmt=LOG_FORMAT, datefmt=LOG_DATE_FORMAT, style=LOG_STYLE)
+            coloredlogs.install(
+                level=self.level,
+                fmt=LOG_FORMAT,
+                datefmt=LOG_DATE_FORMAT,
+                style=LOG_STYLE,
+                level_styles=RED_GOLD_LEVEL_STYLES,
+                field_styles=RED_GOLD_FIELD_STYLES,
+            )
+        coloredlogs.install(
+            level=self.level,
+            logger=self,
+            fmt=LOG_FORMAT,
+            datefmt=LOG_DATE_FORMAT,
+            style=LOG_STYLE,
+            level_styles=RED_GOLD_LEVEL_STYLES,
+            field_styles=RED_GOLD_FIELD_STYLES,
+        )
 
 
 # Cache already used loggers to make sure their level is preserved

@@ -39,7 +39,7 @@ credentials:
   Crave: 'email:password'
   ParamountPlus: 'email:password'
   DisneyPlus: 'email:password'
-  HULUJP: ''email:password''
+  HULUJP: 'email:password'
   UniversCine: 'email:password'
   Hidive: 'email:password'
   Netflix: 'email:password'

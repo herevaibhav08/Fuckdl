@@ -1,0 +1,16 @@
+[I] fuckdl : Fuckdl - Restructured for Scalability
+[I] fuckdl : [Telegram]        : @barbiedrm
+[I] fuckdl : [Root Config]     : C:\Users\Administrator\Documents\GitHub\Fuckdl\fuckdl\fuckdl.yml
+[I] fuckdl : [Service Configs] : C:\Users\Administrator\Documents\GitHub\Fuckdl\fuckdl\services
+[I] fuckdl : [Cookies]         : C:\Users\Administrator\Documents\GitHub\Fuckdl\fuckdl\cookies
+[I] fuckdl : [CDM Devices]     : C:\Users\Administrator\Documents\GitHub\Fuckdl\fuckdl\devices
+[I] fuckdl : [Cache]           : C:\Users\Administrator\Documents\GitHub\Fuckdl\fuckdl\cache
+[I] fuckdl : [Logs]            : C:\Users\Administrator\Documents\GitHub\Fuckdl\fuckdl\logs
+[I] fuckdl : [Temp Files]      : C:\Users\Administrator\Documents\GitHub\temp
+[I] fuckdl : [Downloads]       : C:\Users\Administrator\Documents\GitHub\downloads
+[I] dl :  + 1 Local Vault
+[I] dl :  + 0 Remote Vaults
+[I] dl :  + 0 HTTP Vaults
+[I] dl :  + 0 HTTPAPI Vaults
+[I] dl :  + Playready Device: lg_electronics_inc_lg_webos_tv_msd96alvx_sl3000 (L3000)
+[C] dl :  - Profile 'default' has no cookies or credentials

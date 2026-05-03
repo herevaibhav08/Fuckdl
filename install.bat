@@ -1,9 +1,16 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
+:: Red & Gold UI
+title Fuckdl  ::  Red ^& Gold Edition
+color 0E
+
 echo.
-echo === Fuckdl setup (Windows) ===
+echo ============================================================
+echo            F U C K D L   -   Red ^& Gold Edition
+echo ============================================================
 echo Telegram: @barbiedrm
+echo === Fuckdl setup (Windows) ===
 echo.
 
 :: Check for Python
